@@ -125,10 +125,10 @@ bool BleKeyboard::isConnected(void) const {
   return connected;
 }
 
-void BleKeyboard::setBatteryLevel(uint8_t level) {
+void BleKeyboard::setBatteryLevel(uint8_t level, bool notify) {
   this->batteryLevel = level;
   if (hid != 0)
-    this->hid->setBatteryLevel(this->batteryLevel);
+    this->hid->setBatteryLevel(this->batteryLevel, notify);
 }
 
 void BleKeyboard::sendReport(KeyReport* keys)

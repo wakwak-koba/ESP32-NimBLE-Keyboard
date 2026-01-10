@@ -1,0 +1,11 @@
+.vscode/
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+.DS_Store
+Thumbs.db
+include/secrets.h
+src/secrets.h

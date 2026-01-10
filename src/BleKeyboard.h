@@ -109,7 +109,7 @@ public:
   size_t write(const uint8_t *buffer, size_t size);
   void releaseAll(void);
   bool isConnected(void) const;
-  void setBatteryLevel(uint8_t level);
+  void setBatteryLevel(uint8_t level, bool notify = true);
   void onConnect(Callback cb);
   void onDisconnect(Callback cb);
 
