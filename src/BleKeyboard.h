@@ -109,6 +109,17 @@ public:
   size_t write(const uint8_t *buffer, size_t size);
   void releaseAll(void);
   bool isConnected(void) const;
+  /**
+   * @brief Update the current battery level.
+   *
+   * @param level   New battery level in percent (0–100).
+   * @param notify  When true (default), send a BLE notification with the updated
+   *                battery level to all connected devices. When false, only update
+   *                the stored/advertised battery level without sending a
+   *                notification, which can be useful to avoid unnecessary
+   *                battery level notifications to connected devices (e.g. during
+   *                frequent or intermediate updates).
+   */
   void setBatteryLevel(uint8_t level, bool notify = true);
   void onConnect(Callback cb);
   void onDisconnect(Callback cb);
